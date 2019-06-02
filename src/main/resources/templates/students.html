@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Registration Form</title>
+</head>
+<body>
+	<div>
+		<h1>Students</h1>
+	</div>
+
+	<div>
+		
+	   <table>
+	     <thead>
+	     <tr>
+	     <th>ID</th>
+	     <th>NAME</th>
+	     <th>EMAIL</th>
+	     </tr>
+	     </thead>
+	     <tbody>
+	       <tr th:each="student :${students}">
+	       <td th:text="${student.studentId}"></td>
+	       <td th:text="${student.name}"></td>
+	       <td th:text="${student.email}"></td>
+	     </tr>
+	     
+	     </tbody>
+	   
+	   </table>
+
+
+	</div>
+
+</body>
+</html>
